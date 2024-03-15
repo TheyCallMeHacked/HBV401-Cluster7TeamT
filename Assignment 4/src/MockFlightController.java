@@ -1,10 +1,10 @@
 public class MockFlightController implements ServiceContoller {
-    public ArrayList<Service> search(str) {
-        return new ArrayList<Service>();
+    public Service[] search(str) {
+        return new Service[]();
     }
 
-    public ArrayList<Service> recommend(Trip) {
-        return new ArrayList<Service>();
+    public Service[] recommend(Trip) {
+        return new Service[]();
     }
 
 
