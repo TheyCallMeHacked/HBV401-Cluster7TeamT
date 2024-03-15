@@ -7,6 +7,15 @@ public class Engine {
         this.controllers = controllers;
     }
 
+    public Service[] search(String str) {
+        ArrayList result = new ArrayList<>();
+
+        for (ServiceController sc : controllers) {
+            result.addAll(sc.search(str));
+        }
+        return (Service[]) result.toArray();
+    }
+
     public Service[] search(ServiceController controller, String str) {
         return controller.search(str);
     }
