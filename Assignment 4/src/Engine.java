@@ -28,7 +28,7 @@ public class Engine {
     }
 
     public Service[] recommend(Trip trip) {
-        return new Service[];
+        return new Service[0];
     }
 
     public void contactAdministrators(String message) {}
