@@ -1,22 +1,15 @@
-public class MockHotelController implements FlightContoller {
-    public Flight[] search(String query) {
-        return new Flight[0];
-    }
-
-    public Flight[] recommend(Trip trip) {
-        return new Flight[0];
-    }
-
-
-    public void addFlight(Flight flight) {
-        return;
-    }
-
-    public void removeFlight(Flight flight) {
-        return;
-    }
-
-    public Booking book(specialNeeds sn, User user) {
-        return new Booking();
-    }
+public class MockHotelController implements ServiceController {
+  public Hotel[] search(str){
+    return new Hotel[0];
+  } 
+  public Hotel[] recommend(Trip){
+    return new Hotel[0];
+  } 
+  public void addService(Hotel){
+    return;
+  }
+  public void removeService(Hotel){}
+  public Booking book(specialNeeds, user){
+    return new Booking();
+  }
 }

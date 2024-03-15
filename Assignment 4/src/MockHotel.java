@@ -1,8 +1,9 @@
+import java.time.LocalDateTime;
 public class MockHotel extends Service{
-  private DateTime checkIn;
-  private DateTime checkOut;
-  public DateTime getCheckIn(){return checkIn;}
-  public DateTime getCheckOut(){return checkOut;}
-  public void SetCheckIn(DateTime checkin){ this.checkIn = checkin; }
-  public void SetCheckOut(DateTime checkOut){ this.checkOut = checkOut; }
+  private LocalDateTime checkIn;
+  private LocalDateTime checkOut;
+  public LocalDateTime getCheckIn(){return checkIn;}
+  public LocalDateTime getCheckOut(){return checkOut;}
+  public void SetCheckIn(LocalDateTime checkin){ this.checkIn = checkin; }
+  public void SetCheckOut(LocalDateTime checkOut){ this.checkOut = checkOut; }
 }
