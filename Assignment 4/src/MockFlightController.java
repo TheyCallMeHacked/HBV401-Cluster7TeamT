@@ -1,18 +1,18 @@
-public class MockFlightController implements ServiceContoller {
-    public Service[] search(String query) {
-        return new Service[0];
+public class MockFlightController implements ServiceController {
+    public MockFlight[] search(String query) {
+        return new Flight[0];
     }
 
-    public Service[] recommend(Trip trip) {
-        return new Service[0];
+    public MockFlight[] recommend(Trip trip) {
+        return new Flight[0];
     }
 
 
-    public void addService(Service service) {
+    public void addFlight(MockFlight flight) {
         return;
     }
 
-    public void removeService(Service service) {
+    public void removeFlight(MockFlight flight) {
         return;
     }
 
