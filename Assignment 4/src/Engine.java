@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Engine {
     ServiceController[] controllers;
@@ -12,7 +14,26 @@ public class Engine {
     }
 
     public Service[] sort(Service[] services, SortingParam sortingParam, boolean reverse) {
-        return services; // Fill in later?
+        Service[] result = services.clone();
+
+        Comparator comp;
+
+        switch (sortingParam) {
+            case ID:
+                comp = (Service s1, Service s2) -> s2.getId() - s1.getId();
+                break;
+
+            case PRICE:
+                comp = (Service s1, Service s2) -> s2.getPrice() - s1.getPrice();
+                break;
+
+        }
+
+        if (reverse) comp = comp.reversed();
+
+        Arrays.sort(result, comp);
+
+        return result;
     }
 
     public Service[] filter(Service[] services, Filter[] filters) {
