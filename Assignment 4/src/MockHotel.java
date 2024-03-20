@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+
 public class MockHotel extends Service{
   private LocalDateTime checkIn;
   private LocalDateTime checkOut;
