@@ -4,6 +4,11 @@ public class TestFixture {
     @BeforeAll
     static void setUpClass() throws Exception {
         // Code executed before the first test method
+        ServiceController[] serviceControllers = new ServiceController[3];
+        serviceControllers[0] = new MockFlightController();
+        serviceControllers[1] = new MockHotelController();
+        serviceControllers[2] = new MockTourController();
+        Engine engine = new Engine(serviceControllers);
     }
 
     @BeforeEach
@@ -12,8 +17,9 @@ public class TestFixture {
     }
 
     @Test
-    void oneThing() {
-        // Code that tests one thing
+    void search() {
+        Service[] result = engine.search("foo");
+        assertEquals(result, new Service[0]);
     }
 
     @Test
