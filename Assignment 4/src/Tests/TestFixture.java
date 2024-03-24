@@ -56,7 +56,7 @@ public class TestFixture {
         Service sort4 = new Service(3000);
         Service[] sortServicePrice = {sort1, sort2, sort3, sort4};
 
-        sortedServicesPrice = engine.sort(sortServicePrice, SortingParam.ID, false);
+        sortedServicesPrice = engine.sort(sortServicePrice, SortingParam.PRICE, false);
 
         Service[] expectedPriceOrder = new Service[] {sort2, sort4, sort3, sort1};
         assertArrayEquals(expectedPriceOrder, sortedServicesPrice);
@@ -71,7 +71,7 @@ public class TestFixture {
         Service sort4 = new Service(3000);
         Service[] sortServicePrice = {sort1, sort2, sort3, sort4};
 
-        sortedServicesPrice = engine.sort(sortServicePrice, SortingParam.ID, true);
+        sortedServicesPrice = engine.sort(sortServicePrice, SortingParam.PRICE, true);
 
         Service[] expectedPriceOrder = new Service[] {sort1, sort3, sort4, sort2};
         assertArrayEquals(expectedPriceOrder, sortedServicesPrice);
